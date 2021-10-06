@@ -77,12 +77,6 @@ public class FamilyAccountJdbcDao extends User implements FamilyAccountDao{
 
     }
 
-    /*@Override
-    public void registerFamilyMember(FamilyAccount familyMember){
-        String sql = "INSERT INTO users (username, password_hash, role) VALUES (?, ?, user)";
-        template.update(sql);   // cannot call getters from user.java to set sql query - need advice on how to register new family members
-    }*/
-
     private FamilyAccount mapResultToFamilyAccount(SqlRowSet result){
         String familyName = result.getString("family_name");
         Long familyId = result.getLong("family_id");
@@ -96,16 +90,5 @@ public class FamilyAccountJdbcDao extends User implements FamilyAccountDao{
 
         return new FamilyAccountDetailed(username, familyId, userId);
     }
-
-
-/*    public FamilyAccount getFamilyById(Long familyId) {
-        FamilyAccount family = null;
-        String sql = "SELECT * FROM families WHERE family_id = ?";
-        SqlRowSet result = template.queryForRowSet(sql, familyId);
-        if (result.next()) {
-            family = mapResultToFamilyAccount(result);
-        }
-        return family;
-    }*/
 
 }
