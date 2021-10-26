@@ -20,5 +20,4 @@ public interface FamilyAccountDao {
 
    public void addFamilyMember(Long familyId, Long userId);
 
-    // FamilyAccount getFamilyById (Long familyId);
 }
