@@ -18,7 +18,4 @@ public interface BookDao {
 
     void removeBook(String isbn);
 
-//    Book updateBook (Book book);
-
-  //  void editBook(Book bookToAdd, long isbn);
 }
