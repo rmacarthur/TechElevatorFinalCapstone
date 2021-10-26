@@ -47,29 +47,6 @@ public class BooksController {
         logTimestamp("Removing book " + isbn);
     }
 
-    //    @GetMapping("/books/{author}")
-//    public Book getBookByAuthor(@PathVariable String author) {
-//        logTimestamp("Returning " + author);
-//        Book aBook = bookDao.getBookByAuthor(author);
-//
-//        return aBook;
-//    }
-//
-//    @GetMapping("/books/{isbn}")
-//    public Book getBookByIsbn (@PathVariable String isbn) {
-//        logTimestamp("Returning " + isbn);
-//        Book aBook = bookDao.getBookByIsbn(isbn);
-//
-//        return aBook;
-//    }
-
-//    @PutMapping("/updateBook")
-//    public void updateBook(@RequestBody Book book){
-//        bookDao.updateBook(book);
-//        logTimestamp("Updating book"+book.getTitle());
-//    }
-    // TODO this is part of the update Book method... do we need it?
-
     static void logTimestamp (String msg) {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         System.out.println(msg + " at " + timestamp);
