@@ -101,15 +101,6 @@ public class ReadingActivityJdbcDao implements ReadingActivityDao {
         return 0;
     }
 
-    //  1. use the getBookByTitle() method in the book dao.
-    //     1a. if its output is null, then the book doesn't exist.
-    //         - create a new book object
-    //         - call the addBook method in the book dao , have it return the book id
-    //         - insert into reading_activites
-    //
-    //     1b. If the output is not null, then the book exists.
-    //         - take the book id, and use it to insert into reading activities
-
     @Override
     public void addActivity(ReadingActivityAdd activityToAdd) {
 
