@@ -25,9 +25,6 @@ public class FamilyAccountController {
     public List<FamilyAccountDetailed> getFamilyList(@PathVariable Long familyId){
         logTimestamp("Getting all family members...");
         return familyAccountDao.getFamilyList(familyId);
-         /*List<FamilyAccountDetailed> familyList = familyAccountDao.getFamilyList(familyId);
-        System.out.println(familyList);
-         return null;*/
     }
 
     @GetMapping(path = {"/family/{id}"})
@@ -65,17 +62,5 @@ public class FamilyAccountController {
         Timestamp timestamp = new Timestamp(System.currentTimeMillis());
         System.out.println(msg + " at " + timestamp);
     }
-
-     /* @GetMapping("/members/{familyId}")
-    public FamilyAccount getFamilyById (Long familyId) {
-        logTimestamp("Returning family members...");
-       return familyAccountDao.getFamilyById(familyId);
-    }*/
-
-       /*@PostMapping("/addFamilyMember")
-    public void registerFamilyMember(@RequestBody FamilyAccount newFamilyMember){
-        logTimestamp("Adding new family member...");
-        familyAccountDao.registerFamilyMember(newFamilyMember);
-    }*/
 
 }
