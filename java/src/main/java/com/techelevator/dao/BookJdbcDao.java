@@ -81,14 +81,6 @@ public class BookJdbcDao implements BookDao {
         template.update(sql, isbn);
     }
 
-//    @Override
-//    public Book updateBook(Book book) {
-//        String sql = "INSERT INTO books (notes, minutes-read) " +
-//                "values (?, ?)";
-//        template.update(sql, book.getNotes(), book.getMinutesRead());
-//        return getBookByTitle(book.getTitle());
-//    }
-// TODO add this functionality?
     private Book mapResultToBook(SqlRowSet result){
 
         String isbn = result.getString("isbn");
