@@ -88,23 +88,6 @@ public class UserJdbcDao extends FamilyAccount implements UserDao {
         return userCreated;
     }
 
-    /*@Override
-    public List<User> getFamilyList(){
-        List<User> familyList = new ArrayList<>();
-        String sql = "SELECT * FROM users";
-        SqlRowSet result = jdbcTemplate.queryForRowSet(sql);
-        while (result.next()) {
-            familyList.add(mapRowToUser(result));
-        }
-        return familyList;
-    }*/
-
-   /* @Override
-    public void addFamilyMember(User newUser) {
-        String sql = "INSERT INTO users (username, role) values (?, user)";
-        jdbcTemplate.update(sql, newUser.getUsername());
-    }*/
-
     private User mapRowToUser(SqlRowSet rs) {
         User user = new User();
         user.setId(rs.getLong("user_id"));
